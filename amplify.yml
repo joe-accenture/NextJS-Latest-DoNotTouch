@@ -4,12 +4,9 @@ frontend:
     preBuild:
       commands:
         - npm install -g pnpm@latest-10
-        - pnpm install
-        - ./patch-next.sh
-        - aws sts get-caller-identity
     build:
       commands:
-        - pnpm run build
+        - ls -la
   artifacts:
     baseDirectory: .next
     files:
